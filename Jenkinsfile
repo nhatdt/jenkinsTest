@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "pwd"
+                sh "codeclimate"
             }
         }
         stage('Deploy') {
