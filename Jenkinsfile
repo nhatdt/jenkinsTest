@@ -1,11 +1,9 @@
 pipeline {
-    agent none
+    agent {
+        label 'docker' 
+    }
     
     stages {
-        stage('Initialize'){
-            def dockerHome = tool 'JenkinsDocker'
-            env.PATH = "${dockerHome}/bin:${env.PATH}"
-        }
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -14,6 +12,7 @@ pipeline {
         stage('Test') {
             agent {
                 docker {
+                  label 'docker'
                   image 'codeclimate/codeclimate:latest'
                 }
             }
