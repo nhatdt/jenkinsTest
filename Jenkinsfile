@@ -8,14 +8,9 @@ pipeline {
             }
         }
         stage('Test') {
-            agent {
-                docker {
-                  image 'codeclimate/codeclimate:latest'
-                }
-            }
             steps {
                 echo 'Testing..'
-                sh "ls"
+                sh "echo $USER"
             }
         }
         stage('Deploy') {
