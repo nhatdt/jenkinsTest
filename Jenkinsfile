@@ -10,7 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "codeclimate"
+                sh "/Users/Shared/Jenkins/codeclimate"
             }
         }
         stage('Deploy') {
