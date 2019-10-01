@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'codeclimate/codeclimate:latest' }
+    }
 
     stages {
         stage('Build') {
