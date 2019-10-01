@@ -12,7 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh "/Users/Shared/Jenkins/codeclimate"
+                sh "pwd"
             }
         }
         stage('Deploy') {
