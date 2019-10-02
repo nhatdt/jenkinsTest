@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     
     stages {
         stage('Build') {
@@ -9,6 +9,7 @@ pipeline {
         }
         stage('Test') {
             agent {
+                label 'docker'
                 docker { image 'codeclimate/codeclimate:latest' }
             }
             steps {
