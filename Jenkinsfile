@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 echo 'Testing...'
-                sh 'docker ps -a'
+                sh 'docker run codeclimate/codeclimate:latest'
             }
         }
         stage('Deploy') {
