@@ -15,7 +15,7 @@ pipeline {
             }
             steps {
                 echo 'Testing...'
-                sh 'codeclimate'
+                sh './codeclimate'
             }
         }
         stage('Deploy') {
