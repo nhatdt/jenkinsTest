@@ -14,7 +14,7 @@ pipeline {
                 }
             }
             steps {
-                echo 'Testing...'
+                echo 'Testing..'
                 sh "pwd"
             }
         }
