@@ -12,7 +12,7 @@ pipeline {
                 docker { image 'codeclimate/codeclimate:latest' }
             }
             steps {
-                echo 'Testing...'
+                echo 'Testing..'
                 sh "pwd"
             }
         }
