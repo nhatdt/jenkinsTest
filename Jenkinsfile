@@ -9,8 +9,10 @@ pipeline {
         }
         stage('Test') {
             agent {
-                label 'docker'
-                docker { image 'codeclimate/codeclimate:latest' }
+                docker {
+                    label 'docker'
+                    image 'codeclimate/codeclimate:latest'
+                }
             }
             steps {
                 echo 'Testing..'
