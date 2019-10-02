@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent none
     
     stages {
         stage('Build') {
@@ -8,9 +8,12 @@ pipeline {
             }
         }
         stage('Test') {
+            agent {
+                docker { image 'codeclimate/codeclimate:latest' }
+            }
             steps {
                 echo 'Testing...'
-                sh "sudo docker ps -a"
+                sh "pwd"
             }
         }
         stage('Deploy') {
