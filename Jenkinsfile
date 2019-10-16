@@ -15,7 +15,6 @@ pipeline {
             }
             steps {
                 echo 'Testing...'
-                #sh 'docker run codeclimate/codeclimate:latest'
                 sh 'docker ps -a'
             }
         }
