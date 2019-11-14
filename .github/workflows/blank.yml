@@ -17,5 +17,3 @@ jobs:
         echo test, and deploy your project.
     - name: ESLint checks
       uses: gimenete/eslint-action@1.0
-    - name: PHPCodeSniffer
-      uses: rtCamp/action-phpcs-inspection@v1.0.0
